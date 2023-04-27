@@ -1,0 +1,680 @@
+/* ---------------------------------Website view-------------------------------------- */
+svg {
+  height: 5vw;
+  width: 5vw;
+
+}
+
+#navbarMain {
+  position: relative;
+}
+
+nav li {
+  float: right;
+  /* list style removes the bullet */
+  list-style: none;
+  margin-top: 3vw;
+
+}
+
+nav li a {
+  font-family: SegoeScript, 'Segoe Script';
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+  display: flex;
+}
+
+
+nav li a:hover {
+  background-color: #d8e2e2;
+
+}
+
+.dropdown-cont {
+  margin-top: 0%;
+  display: none;
+  position: absolute;
+  background-color: #A5DBDD;
+  min-width: 165px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-cont a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-cont a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-cont {
+  display: block;
+}
+
+
+.bgImg {
+  /* display:none; */
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+h2 {
+  font-family: SegoeScript, 'Segoe Script';
+  color: rgb(32, 96, 142);
+  text-shadow: 2px 2px 10px rgb(255, 218, 7);
+  text-decoration: none;
+  font-weight: bold;
+  stroke: #06273f;
+  stroke-miterlimit: 50;
+}
+
+h3 {
+  font-family: SegoeScript, 'Segoe Script';
+  color: rgb(32, 96, 142);
+  text-shadow: 2px 2px 10px rgb(255, 218, 7);
+  text-decoration: none;
+  font-weight: bold;
+  stroke: #06273f;
+  stroke-miterlimit: 50;
+
+
+}
+
+#banner {
+
+  position: absolute;
+
+}
+
+#image {
+  position: fixed;
+  bottom: 0;
+  max-width: 30%;
+  left: 50px;
+  filter: drop-shadow(0 0 20px #407c87)
+}
+
+#box {
+  max-width: 70%;
+  margin-left: 140px;
+
+}
+
+#decor {
+  max-width: 500px;
+
+
+}
+
+#aboutme {
+  max-width: 300px;
+
+}
+
+.btn {
+  background-color: #01395E;
+  text-decoration: none;
+  border: none;
+  border-radius: 14px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  color: white;
+
+
+}
+
+.btn:hover {
+  background-color: antiquewhite;
+
+}
+
+
+#headerAboutMe {
+  align-items: center;
+  background-image: url('../Source/decor.png');
+  background-repeat: no-repeat;
+  background-size: 40vw 5vw;
+  background-position-x: center;
+}
+
+#bar-skills {
+  justify-content: space-evenly;
+}
+
+.skillBar-left {
+  width: 30%;
+}
+
+.skillBar-right {
+  width: 30%;
+}
+
+#huh {
+  margin-top: 20px;
+}
+
+#name {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 28px;
+
+}
+
+#yong {
+  text-align: start;
+}
+
+#xuan {
+  text-align: end;
+}
+
+#rowrow {
+  width: 50vw;
+  height: 22vw;
+  align-items: center;
+  background-image: url('../Source/box.png');
+  background-repeat: no-repeat;
+  background-size: 40vw 40vw;
+  background-position-x: center;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#introTExt {
+  bottom: 20%;
+  margin-right: 50px;
+}
+
+#bottomAboutME {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#bottomAboutME1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#bottomAboutME2 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* .centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* .wrapper{
+  max-width: 1200px;
+} */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+/* .wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow:hidden;
+  white-space: nowrap;
+
+  
+} */
+
+/* .carousel img{
+  height: 340px;
+  object-fit: cover;
+  width: calc(100 / 3);
+  margin-left: 6px;
+ 
+} */
+
+.carousel img:first-child {
+  margin-left: 0px;
+  height: 200px;
+}
+
+
+
+/* flip test */
+
+
+.flip-card-hobby {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner-hobby {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-hobby:hover .flip-card-inner-hobby {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-hobby,
+.flip-card-back-hobby {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+.flip-card-front-hobby {
+  background-color: #6d6d6d;
+  color: black;
+  height: 200px;
+  width: 180px;
+}
+
+.flip-card-back-hobby {
+
+  color: rgb(0, 82, 107);
+  transform: rotateY(180deg);
+}
+
+
+
+
+#hobby {
+  background-color: transparent;
+  background-image: none;
+
+}
+
+
+
+.flip-card-skills {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner-skills {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-skills:hover .flip-card-inner-skills {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front-skills,
+.flip-card-back-skills {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front-skills {
+  background-color: #6d6d6d;
+  color: black;
+  height: 200px;
+  width: 180px;
+}
+
+.flip-card-back-skills {
+  color: rgb(0, 82, 107);
+  transform: rotateY(180deg);
+}
+
+
+.container {
+  display: flexbox;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+#img {
+  height: 200px;
+  max-width: 400px;
+
+}
+
+#img:hover {
+
+  transform: scale(1.2);
+
+}
+
+#img1 {
+  height: 400px;
+  max-width: 500px;
+
+}
+
+#img1:hover {
+
+  transform: scale(1.2);
+
+}
+
+#film1 {
+  height: 300px;
+  max-width: 500px;
+}
+
+#bar {
+  place-items: center;
+  background: #9cd1ee4d;
+  opacity: 80%;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  font-family: SegoeScript, 'Segoe Script';
+  width: 100%;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #886012;
+  /* border-style: solid; */
+}
+
+.progress-title {
+  width: 100%;
+  height: auto;
+}
+
+.progress-title h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ddd;
+  margin: 0 0 20px;
+}
+
+.progress {
+  height: 20px;
+  background: #407c87;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 2px #A5DBDD;
+  margin-bottom: 40px;
+  overflow: visible;
+  position: relative;
+}
+
+.progress .progress-bar {
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  animation: animate-positive 2s;
+}
+
+.progress .progress-value {
+  width: 65px;
+  height: 25px;
+  line-height: 25px;
+  background: rgb(4, 116, 150);
+  font-size: 14px;
+  color: antiquewhite;
+  border-radius: 0 0 15px 15px;
+  border: 1px solid #000;
+  border-top: none;
+  box-shadow: 0 2 px 2px #6d6d6d;
+  position: absolute;
+  bottom: -25px;
+  right: 60px;
+}
+
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+
+#banner3 {
+
+  background-image: linear-gradient(180deg, #B8DDED, #e7eff4);
+}
+
+#expexp {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+
+#text {
+  font-family: SegoeScript, 'Segoe Script';
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  display: flex;
+
+}
+
+.cards {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  gap: 20px;
+  font-family: sans-serif;
+}
+
+.card {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  background-color: cadetblue;
+}
+
+.card__image {
+
+  display: block;
+  /* border-radius: 10px; */
+  width: 200px;
+  height: 200px;
+  margin: 1em;
+  border-radius: 0.2em;
+  transition: 0.6s;
+
+
+}
+
+.card__content {
+  line-height: 1.5;
+  font-size: 0.9em;
+  padding: 15px;
+  background: #d7f3fe;
+
+}
+
+.card__content>p:first-of-type {
+  margin-top: 0;
+}
+
+.card__content>p:last-of-type {
+  margin-bottom: 0;
+}
+
+.card__info {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #638d99;
+  font-size: 0.8em;
+  color: #ffffff;
+  border-bottom: 2px solid #ddd;
+}
+
+
+.card__link {
+  color: #fbf1f1;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+
+p {
+  /* margin-left: 15%; */
+
+}
+
+button {
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: #01395E;
+}
+
+#no {
+  color: #000000;
+  border-style: groove;
+
+}
+
+#yes {
+  color: #000e14;
+  border-style: groove;
+
+}
+
+#ok {
+  color: #000000;
+  border-style: groove;
+
+}
+
+#hello {
+  color: #000000;
+  border-style: groove;
+}
+
+div.card a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.bgVid {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.bgVid {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-size: contain;
+  bottom: 0px;
+  z-index: -1;
+  /*set as background (z=front or back)*/
+  width: 100vw;
+  max-height: 100vw;
+
+
+
+}
+
+b {
+  margin-left: 5px;
+}
+/* 
+.littleToy-container {
+  display: block;
+} */
+
+#minds {
+  margin-left: 18vw;
+  margin-right: 18vw;
+
+}
+
+#mindhomepg {
+
+  width: 310px;
+  border: 5px solid rgb(4, 100, 122);
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #407c87;
+  border-radius: 0.2em;
+  transition: 0.6s;
+  margin-top: 10px;
+}
+
+#vedeo {
+  border: 10px solid rgb(0, 70, 88);
+  height: 350px;
+  width: 310px;
+}
+
+#mindsVedio {
+  z-index: 5;
+}
+
+h4{
+  font-family: SegoeScript, 'Segoe Script';
+}
+
+.lkt{
+  margin-left: 18vw;
+  margin-right: 18vw;
+}
+#PSposter{
+  border: 10px solid rgb(0, 70, 88);
+  height: 350px;
+  width: 290px;
+}
+#moodboard{
+  height: 200px;
+  width: 200px;
+}
+
+/* ---------------------------------Mobile view-------------------------------------- */
+@media only screen and (max-width: 768px) {}
