@@ -756,7 +756,38 @@ h5{
 }
 
 
+#xplorelogo{
+  max-width:50%;
+  
+}
+#lowfi{
+  max-width:50%;
+}
 
+#covidlowfi{
+  max-width:90%;
+}
+
+#whatthis{
+  border: 10px solid rgb(0, 70, 88);
+  height: 250px;
+  width: 350px;
+}
+#concertmoodboard{
+  height: 200px;
+  width: 250px;
+}
+#concertcolor{
+  max-width:90%;
+}
+#logologo{
+  max-width:60%;
+  border: 10px solid rgb(0, 70, 88);
+
+}
+#moodboard4{
+  max-width:70%;
+}
 
 /* ---------------------------------Mobile view-------------------------------------- */
 @media only screen and (max-width: 768px) {
