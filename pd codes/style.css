@@ -862,7 +862,15 @@ h5{
 #demo{
   max-width: 60%;
 }
+#escaperoom{
+  max-width:50%;
+  border: 10px solid rgb(0, 70, 88);
+}
 
+#aniamte{
+  max-width:50%;
+  border: 10px solid rgb(0, 70, 88);
+}
 .carousel-control-prev-icon {
   background-color: #513703;
 }
