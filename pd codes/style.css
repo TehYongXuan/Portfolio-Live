@@ -62,9 +62,9 @@ nav li a:hover {
 
 
 .bgImg {
-  /* display:none; */
+  display:none;
   position: fixed;
-  z-index: -1;
+  z-index: -1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -239,7 +239,8 @@ h3 {
 .aboutmebody .carousel {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+
 }
 
 
@@ -1079,18 +1080,55 @@ h2:after {
   width: 100%;
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
-  background-color: #2ecc71;
-  cursor: pointer;
-  outline: none;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  box-sizing: border-box;
+  background: linear-gradient(90deg,#03a9f4,#ffeb3b,#f441af,#03a9f4);
+  text-decoration: none;
+  border-radius: 30px;
+  background-size: 400%;
+  z-index: 1;
   border: none;
-  color: white;
-  transition:.3s;
-}
-.contact-btn:hover{
-  background-color:#27ae60;
-
+  outline: none;
+  margin-left:50%;
+  margin-top:5%;
 }
 
+
+.contact-btn:hover {
+  animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
+}
+
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg,#03a9f4,#ffeb3b,#f441af,#03a9f4);
+  border-radius: 40px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.contact-btn:hover::before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 6s linear infinite;
+}
 @keyframes bounceNrotate {
 
   0%,
@@ -1113,7 +1151,7 @@ h2:after {
 
 
 /* ---------------------------------Mobile view-------------------------------------- */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   main.row {
     grid-template-columns: 1fr;
   }
@@ -1131,6 +1169,9 @@ h2:after {
 }
 
 
-
-
+html{
+  background:url('../Source/bg.jpg')no-repeat center fixed;
+  background-size: cover;
+  background-color: none;
+}
 }
