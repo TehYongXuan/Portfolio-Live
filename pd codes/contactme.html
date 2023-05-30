@@ -225,7 +225,7 @@
 
                     <li><a href="My Works.html">My Works</a></li>
 
-                    <li><a href="#">Contact Me</a></li>
+                    <li><a href="contactme.html">Contact Me</a></li>
 
 
                     </form>
@@ -243,22 +243,97 @@
 
 
     <body>
+
         <div id="contact">
             <div class="contact-container">
                 <div class="content-box">
-                    <div class="left"></div>
+
+                    <div class="left" style="display:flex; align-items: center;">
+                        <div class="col">
+                            <div class="row-6">
+                                <ul class="wrapper">
+                                    <li class="icon instagram">
+                                        <span class="tooltip">Instagram</span>
+                                        <span><i class="fa-brands fa-instagram"></i></i></span>
+                                    </li>
+                                    <li class="icon telegram">
+                                        <span class="tooltip">Telegram</span>
+                                        <span><i class="fa-brands fa-telegram"></i></span>
+                                    </li>
+                                    <li class="icon linkedin">
+                                        <span class="tooltip">linkedin</span>
+                                        <span><i class="fa-brands fa-linkedin"></i></span>
+                                    </li>
+                                    <li class="icon discord">
+                                        <span class="tooltip">discord</span>
+                                        <span><i class="fa-brands fa-discord"></i></span>
+                                    </li>
+                                    <li class="icon github">
+                                        <span class="tooltip">github</span>
+                                        <span><i class="fa-brands fa-github"></i></span>
+                                    </li>
+                                    <li class="icon gmail">
+                                        <span class="tooltip">gmail</span>
+                                        <span><i class="fa-solid fa-envelope"></i></span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="row-6">
+
+                                <img id="cutegirl" src="../projects/310.jpg">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="right">
                         <h2>Get in touch!</h2>
-                        <input type="text" class="field" placeholder="Your Name">
-                        <input type="email" class="field" placeholder="Your email">
-                        <textarea class="field area" placeholder="Message"></textarea>
-                        <button class="contact-btn">Send</button>
+                        <input id="nameme" type="text" class="field" placeholder="Your Name">
+                        <input id="subjectme" type="email" class="field" placeholder="Your email">
+                        <input id="messageme" type="subject" class="field" placeholder="Subject">
+                        <textarea id="emailme" class="field area" placeholder="Message"></textarea>
+                        <button id="submitContactUs" class="contact-btn">Send</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script>
 
+
+            var button = document.getElementById('submitContactUs');
+
+            button.addEventListener('click', function (e) {
+                e.preventDefault()
+                var name = document.getElementById('nameme').value;
+                var subject = document.getElementById('subjectme').value;
+                var message = document.getElementById('messageme').value;
+                var email = document.getElementById("emailme").value;
+
+                if (name === "" || subject === "" || message === "" || email === "") {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+
+                var final = "Name: " + name + "<br>Email: " + email + "<br>Subject: " + subject + "<br>Message: " + message;
+                Email.send({
+                    SecureToken: "9c815380-2720-4234-9126-f64db3846601",
+                    To: 'tehyongxuan00@gmail.com',
+                    From: 'tehyongxuan00@gmail.com',
+                    Subject: subject,
+                    Body: final
+                }).then(
+                    message => alert(message),
+                );
+                var allInputs = document.querySelectorAll('input');
+                allInputs.forEach(singleInput => singleInput.value = '');
+                var allInputs1 = document.querySelectorAll('textarea');
+                allInputs1.forEach(singletextarea => singletextarea.value = '');
+            })
+
+        </script>
 
 
 

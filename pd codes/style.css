@@ -62,7 +62,7 @@ nav li a:hover {
 
 
 .bgImg {
-  display:none;
+  /* display:none; */
   position: fixed;
   z-index: -1000;
   top: 0;
@@ -107,8 +107,9 @@ h3 {
 #image {
   position: relative;
   bottom: 0;
-  /* max-width: 30%; */
+  max-width: 30vw;
   left: 50px;
+margin-top:40%;
   filter: drop-shadow(0 0 20px #407c87);
 
 }
@@ -380,6 +381,7 @@ h3 {
 #img {
   height: 200px;
   max-width: 400px;
+  border: 10px solid rgb(0, 70, 88);
 
 }
 
@@ -404,6 +406,8 @@ h3 {
 #film1 {
   height: 300px;
   max-width: 500px;
+  border: 10px solid rgb(0, 70, 88);
+
 }
 
 #bar {
@@ -969,6 +973,7 @@ svg:hover {
 /* Container holding the image and the text */
 .banner-container {
   position: relative;
+
 }
 
 /* Centered image */
@@ -1027,6 +1032,7 @@ svg:hover {
 .left {
   height: 100%;
   background: url("../source/bg.jpg") no-repeat center;
+  
   background-size: cover;
 }
 
@@ -1094,7 +1100,11 @@ h2:after {
   margin-top:5%;
 }
 
-
+#cutegirl{
+  max-width: 20vw;
+  
+  border-radius: 15px;
+}
 .contact-btn:hover {
   animation: animate 6s linear infinite;
 }
@@ -1150,6 +1160,131 @@ h2:after {
 
 
 
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #1877F2;
+  color: #fff;
+}
+
+.wrapper .telegram:hover,
+.wrapper .telegram:hover .tooltip,
+.wrapper .telegram:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #fff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #E4405F;
+  color: #fff;
+}
+.wrapper .discord:hover,
+.wrapper .discord:hover .tooltip,
+.wrapper .discord:hover .tooltip::before {
+  background: #40e4a8;
+  color: #fff;
+}
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #e4b040;
+  color: #fff;
+}
+.wrapper .gmail:hover,
+.wrapper .gmail:hover .tooltip,
+.wrapper .gmail:hover .tooltip::before {
+  background: #9a40e4;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------Mobile view-------------------------------------- */
 @media only screen and (max-width: 600px) {
   main.row {
@@ -1169,9 +1304,5 @@ h2:after {
 }
 
 
-html{
-  background:url('../Source/bg.jpg')no-repeat center fixed;
-  background-size: cover;
-  background-color: none;
-}
+
 }
