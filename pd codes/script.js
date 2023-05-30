@@ -4,6 +4,19 @@
     delay: anime.stagger(100, { from: 'first' }),// increase delay by 100ms for each elements.
     duration: 6000
 })
+anime({
+    targets: '#img',
+    translateX: [-400, 0],
+    delay: anime.stagger(100, { from: 'first' }),// increase delay by 100ms for each elements.
+    duration: 6000
+})
+anime({
+    targets: '#film1',
+    translateX: [400, 0],
+    delay: anime.stagger(100, { from: 'first' }),// increase delay by 100ms for each elements.
+    duration: 6000
+})
+
 
 var easeinout2 = anime({
 
@@ -62,3 +75,5 @@ anime({
     ],
     delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
   });
+
+  
