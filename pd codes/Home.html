@@ -295,14 +295,18 @@
     <script>
         $(document).ready(function () {
 
-            window.addEventListener("dfMessengerLoaded", function () {
-                const dfMessengerWrapper = document.querySelector("df-messenger").shadowRoot.querySelector("df-messenger-chat").shadowRoot.querySelector(".chat-wrapper");
 
-                dfMessengerWrapper.style.height = "400px";
-                dfMessengerWrapper.style.width = "500px";
+            window.addEventListener('dfMessengerLoaded', function (event) {
+                $r1 = document.querySelector("df-messenger");
+                $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+                $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input");
+
+                var sheet = new CSSStyleSheet;
+                sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: 470px }`);
+                $r2.shadowRoot.adoptedStyleSheets = [sheet];
+
             });
         });
-
     </script>
 
     <df-messenger intent="WELCOME" chat-title="Latteh" agent-id="934170d2-ad1a-4bc4-adda-0164af720a07"
