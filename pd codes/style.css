@@ -67,7 +67,7 @@ nav li a:hover {
   z-index: -1000;
   top: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
 }
 
 h2 {
@@ -381,7 +381,7 @@ margin-top:40%;
 #img {
   height: 200px;
   max-width: 400px;
-  border: 10px solid rgb(0, 70, 88);
+  border: 5px solid #624001;
 
 }
 
@@ -404,9 +404,9 @@ margin-top:40%;
 }
 
 #film1 {
-  height: 300px;
-  max-width: 500px;
-  border: 10px solid rgb(0, 70, 88);
+  height: 200px;
+  max-width: 300px;
+  border: 5px solid #624001;
 
 }
 
@@ -573,10 +573,7 @@ a {
 }
 
 
-p {
-  /* margin-left: 15%; */
 
-}
 
 button {
   color: #ddd;
@@ -893,6 +890,9 @@ h5 {
 
   max-width: 100%;
 
+}
+.photo1 {
+  max-width: 100%;
 }
 
 #demo {
