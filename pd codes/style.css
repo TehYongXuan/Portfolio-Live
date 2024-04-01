@@ -17,6 +17,8 @@ nav li {
 
 }
 
+
+
 nav li a {
   font-family: SegoeScript, 'Segoe Script';
   font-size: 20px;
@@ -127,7 +129,9 @@ margin-top:40%;
 }
 
 #aboutme {
-  max-width: 300px;
+  max-width: 20vw;
+  border: 5px solid rgb(15, 68, 82);
+
 
 }
 
