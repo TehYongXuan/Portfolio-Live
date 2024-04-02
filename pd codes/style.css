@@ -70,6 +70,7 @@ nav li a:hover {
   top: 0;
   left: 0;
   /* width: 100%; */
+
 }
 
 h2 {
@@ -111,7 +112,7 @@ h3 {
   bottom: 0;
   max-width: 30vw;
   left: 50px;
-margin-top:40%;
+  margin-top: 40%;
   filter: drop-shadow(0 0 20px #407c87);
 
 }
@@ -895,6 +896,7 @@ h5 {
   max-width: 100%;
 
 }
+
 .photo1 {
   max-width: 100%;
 }
@@ -1029,14 +1031,14 @@ svg:hover {
   align-items: center;
   text-align: center;
   background-color: white;
-  box-shadow:0px 0px 19px 5px rgba(0,0,0,0.19);
+  box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 
 }
 
 .left {
   height: 100%;
   background: url("../source/bg.jpg") no-repeat center;
-  
+
   background-size: cover;
 }
 
@@ -1085,32 +1087,35 @@ h2:after {
   background-color: white;
   border: 2px solid rgba(30, 85, 250, 0.47);
 }
-.area{
+
+.area {
   min-height: 150px;
 }
-.contact-btn{
+
+.contact-btn {
   width: 100%;
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: #fff;
   box-sizing: border-box;
-  background: linear-gradient(90deg,#03a9f4,#ffeb3b,#f441af,#03a9f4);
+  background: linear-gradient(90deg, #03a9f4, #ffeb3b, #f441af, #03a9f4);
   text-decoration: none;
   border-radius: 30px;
   background-size: 400%;
   z-index: 1;
   border: none;
   outline: none;
-  margin-left:50%;
-  margin-top:5%;
+  margin-left: 50%;
+  margin-top: 5%;
 }
 
-#cutegirl{
+#cutegirl {
   max-width: 20vw;
-  
+
   border-radius: 15px;
 }
+
 .contact-btn:hover {
   animation: animate 6s linear infinite;
 }
@@ -1133,7 +1138,7 @@ h2:after {
   right: -5px;
   bottom: -5px;
   z-index: -1;
-  background: linear-gradient(90deg,#03a9f4,#ffeb3b,#f441af,#03a9f4);
+  background: linear-gradient(90deg, #03a9f4, #ffeb3b, #f441af, #03a9f4);
   border-radius: 40px;
   filter: blur(20px);
   opacity: 0;
@@ -1145,6 +1150,7 @@ h2:after {
   opacity: 1;
   animation: animate 6s linear infinite;
 }
+
 @keyframes bounceNrotate {
 
   0%,
@@ -1253,18 +1259,21 @@ h2:after {
   background: #E4405F;
   color: #fff;
 }
+
 .wrapper .discord:hover,
 .wrapper .discord:hover .tooltip,
 .wrapper .discord:hover .tooltip::before {
   background: #40e4a8;
   color: #fff;
 }
+
 .wrapper .github:hover,
 .wrapper .github:hover .tooltip,
 .wrapper .github:hover .tooltip::before {
   background: #e4b040;
   color: #fff;
 }
+
 .wrapper .gmail:hover,
 .wrapper .gmail:hover .tooltip,
 .wrapper .gmail:hover .tooltip::before {
@@ -1291,7 +1300,7 @@ h2:after {
 
 
 /* ---------------------------------Mobile view-------------------------------------- */
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   main.row {
     grid-template-columns: 1fr;
   }
@@ -1301,13 +1310,25 @@ h2:after {
   }
 
 
-.content-box{
-  grid-template-columns:1fr ;
-}
-.left{
-  height: 200px;
-}
+  .content-box {
+    grid-template-columns: 1fr;
+  }
 
+  .left {
+    height: 200px;
+  }
 
-
+  .card__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+  }
+ .card{
+  height:240px;
+  width: 240px;
+  margin-left:40px;
+ }
+ 
 }
