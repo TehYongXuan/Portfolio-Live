@@ -64,12 +64,12 @@ nav li a:hover {
 
 
 .bgImg {
-  /* display:none; */
+
   position: fixed;
   z-index: -1000;
   top: 0;
   left: 0;
-  /* width: 100%; */
+
 
 }
 
@@ -1314,21 +1314,69 @@ h2:after {
     grid-template-columns: 1fr;
   }
 
-  .left {
-    height: 200px;
-  }
+
 
   .card__image {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-  
+
+
   }
- .card{
-  height:240px;
-  width: 240px;
-  margin-left:40px;
- }
- 
+
+  .card {
+    height: 240px;
+    width: 240px;
+    margin-left: 18vw;
+  }
+
+  .col-10 {
+    margin-left: 18vw;
+  }
+
+  .bgImg {
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #yong {
+    margin-left: 50px;
+
+  }
+
+  #xuan {
+    margin-right: 50px;
+  }
+
+  #aboutme {
+    max-width: 150px;
+
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  .row {
+    display: contents;
+  }
+
+  #name {
+    writing-mode: horizontal-tb;
+    margin-bottom: 20px;
+  }
+
+  .col-6 {
+    width: auto;
+  }
+
+  .aboutmebody .carousel {
+    display: contents;
+  }
 }
